@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Plugins */
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* Class based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+
+
+@font-face {
+    font-family: "IranSan"; /* 400 */
+    src: url("/fonts/IRANSansWeb.ttf") format("ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IranSanBold"; /* 400 */
+    src: url("/fonts/IRANSansWeb_Bold.ttf") format("ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IranSanLight"; /* 400 */
+    src: url("/fonts/IRANSansWeb_Light.ttf") format("ttf");
+    font-display: swap;
+}
+
+
+
+@layer components{
+    
+    .container {
+        @apply mx-auto px-4 lg:px-[20px] max-w-full;
+    }
+
+
+    .container-no-max-width {
+        @apply mx-auto px-0 lg:px-[20px] lg:max-w-full max-w-none;
+    }
+    
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-IranSan: var(--font-IranSan);
+    --font-IranSanBold: var(--font-IranSanBold);
+    --font-IranSanLight: var(--font-IranSanLight);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+    --font-IranSanBold: 'IranSanBold';
+    --font-IranSanLight: 'IranSanLight';
+
+    --color-primary: #CB1B1B;
+    --color-green: #0F7B3B;
+    --color-yellow: #FFB800;
+    --color-neutral11: #353535;
+    --color-neutral10: #505050;
+    --color-neutral9: #717171;
+    --color-neutral6: #CBCBCB;
+    --color-neutral5: #D9D9D9;
+    --color-neutral3: #EDEDED;
+    --color-neutral2: #F9F9F9;
+    --color-black: #121212;
+    --color-comments: #2E303B;
+    --color-grf: #013075;
+    --color-grt: #022F71;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
+
+
