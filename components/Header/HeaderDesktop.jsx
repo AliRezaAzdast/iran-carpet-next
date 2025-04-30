@@ -18,16 +18,16 @@ export default function HeaderDesktop() {
               </form>
             </div>
             <ul className="flex gap-x-10 text-black font-bold">
-            <li className="text-primary">
+            <li className="text-primary ">
                 <Link href='/'>صفحه اصلی</Link>
              </li>
-             <li>
+             <li className="hover:text-primary hover:border-b border-primary">
                 <a href="">وبلاگ</a>
              </li>
-             <li>
+             <li className="hover:text-primary hover:border-b border-primary">
                 <a href="">تماس با ما</a>
              </li>
-             <li>
+             <li className="hover:text-primary hover:border-b border-primary">
                 <a href="">درباره ما</a>
              </li>            
             </ul>

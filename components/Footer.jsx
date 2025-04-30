@@ -31,7 +31,7 @@ export default function Footer() {
                   <PiInstagramLogoThin className="h-6 w-6 hover:text-pink-600" />
                 </div>
               </div>
-              <img src="./public/images/footer.png" alt="" />
+              <img src="/images/footer.png" alt="" />
             </div>
           </div>
           <div className="flex justify-between gap-x-20">
